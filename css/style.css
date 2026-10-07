@@ -1,0 +1,220 @@
+/* Base Reset & Design Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+:root {
+    /* Day Mode (Sepia-Kindle Theme) */
+    --bg-color: #fcfaf2;       
+    --text-color: #2b2b2a;     
+    --accent-color: #8c2d19;   
+    --nav-bg: #1e1e1d;         
+    --card-bg: #ffffff;        
+    --border-color: #eadecc;
+    --input-bg: #fafafa;
+    --max-text-width: 700px;   
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg-color: #121212;       /* Soft dark gray instead of harsh pure black */
+    --text-color: #e0e0e0;     /* Highly legible off-white text */
+    --accent-color: #ff6b4a;   /* Slightly brighter crimson accent for dark visibility */
+    --card-bg: #1e1e1e;        /* Subtle raised card background */
+    --border-color: #2d2d2d;
+    --input-bg: #252525;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header & Controls Layout */
+header {
+    background-color: var(--nav-bg);
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #ffffff;
+}
+
+/* Accessibility Control Panel Buttons */
+.reader-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background: #2b2b2a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: -apple-system, sans-serif;
+}
+
+.control-btn:hover {
+    background-color: #444443;
+}
+
+/* Main Long-Form Reading Area */
+main {
+    max-width: var(--max-text-width);
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.8rem; margin-top: 3rem; }
+
+p {
+    margin-bottom: 2rem;
+}
+
+/* Article Template Components */
+.meta-info {
+    font-family: -apple-system, sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+body.dark-mode .meta-info {
+    color: #aaa;
+}
+
+.highlight-box {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    border-radius: 0 4px 4px 0;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.highlight-box p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Interactive Components & Forms */
+form {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.95rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: -apple-system, sans-serif;
+    font-weight: bold;
+}
+
+/* Footer layout */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid var(--border-color);
+    margin-top: 6rem;
+}

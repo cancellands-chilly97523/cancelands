@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Lead | Cancelands</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">CANCELANDS</a></div>
+            <div class="nav-right">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="reader-controls">
+                    <button class="control-btn" id="decrease-font" title="Decrease Text Size">A-</button>
+                    <button class="control-btn" id="increase-font" title="Increase Text Size">A+</button>
+                    <button class="control-btn" id="theme-toggle" title="Toggle Night Mode">🌙 Night</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="readable-content">
+        <h1>Submit a Historical Lead</h1>
+        <div class="meta-info">
+            <span>Viewer Collaboration</span>
+            <span>•</span>
+            <span>Secure Inbox</span>
+        </div>
+
+        <p>Do you have local historical records, rare book passages, or mapping anomalies that we should look into for an upcoming documentary episode? Fill out the secure form below to send your leads directly to our research room.</p>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your lead has been submitted to the archives.');">
+            <div class="form-group">
+                <label for="name">Your Name / Alias</label>
+                <input type="text" id="name" required placeholder="Anonymous researcher">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address (Optional)</label>
+                <input type="email" id="email" placeholder="email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Historical Evidence / Lead Details</label>
+                <textarea id="message" rows="6" required placeholder="Describe the historical anomaly, source material, or coordinates..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Evidence</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cancelands. Structured for comfortable reading.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
